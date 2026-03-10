@@ -1,0 +1,30 @@
+
+.graph{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    padding: 8rem;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.graph_top{
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.graph_card{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.graph_bottom{
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+}

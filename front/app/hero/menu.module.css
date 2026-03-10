@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+
+.menu{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgba(0, 0, 0, 0.849);
+    
+    min-height: 20vh;    
+}
+
+.menu h1{
+
+    color: aliceblue;
+
+    font-size:larger;
+
+    font-family: 'Archivo Black', sans-serif;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+
+    margin: 0;
+
+}
