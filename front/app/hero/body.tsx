@@ -1,5 +1,5 @@
 import style from "./body.module.css"
-import { ChartNoAxesCombined,  Motorbike  } from 'lucide-react';
+import { ChartNoAxesCombined,  Motorbike , PersonStandingIcon } from 'lucide-react';
 
 
 export default function Body(){
@@ -11,11 +11,19 @@ export default function Body(){
             
             <ul className={style.list}>
                 
-                <li className={style.box}>
-                    < Motorbike  size={80} />
-                    <h1>ESTOQUE</h1>
-                
-                </li>
+
+                <a
+                    href="/estoque"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <li className={style.box}>
+                        < Motorbike  size={80} />
+                        <h1>ESTOQUE</h1>
+                    
+                    </li>
+
+                </a>
                 
                 
                 
@@ -28,6 +36,23 @@ export default function Body(){
                         <ChartNoAxesCombined size={80} />
                         
                         <h1>DASHBOARD</h1>
+                    
+                    </li>
+                
+                </a>
+
+
+
+
+                <a
+                    href="/vendedor"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <li className={style.box}>
+                        <PersonStandingIcon size={80} />
+                        
+                        <h1>VENDEDORES</h1>
                     
                     </li>
                 

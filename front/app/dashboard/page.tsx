@@ -1,6 +1,5 @@
 "use client"
 
-import { useEffect, useState } from "react";
 import Menu from "@/app/hero/menu"
 import style from "./page.module.css";
 
@@ -33,73 +32,99 @@ ChartJS.register(
 
 export default function Dashboard(){
 
-  const [chartData, setChartData] = useState({
-    labels: ["Janeiro", "Fevereiro", "Março"],
+  // BAR -> comparação entre vendedores
+  const vendasVendedores = {
+    labels: ["Carlos", "Marcos", "Fernanda", "João"],
     datasets: [
       {
-        label: "Revenue",
-        data: [0,0,0],
-        backgroundColor: ["#7c3aed","#9333ea","#a855f7"]
+        label: "Vendas por vendedor",
+        data: [15, 22, 18, 30],
+        backgroundColor: [
+          "#dc2626",
+          "#ef4444",
+          "#f87171",
+          "#fca5a5"
+        ],
+        borderWidth: 1
       }
     ]
-  });
+  };
 
-  useEffect(()=>{
-
-    const socket = new WebSocket("ws://localhost:8000");
-
-    socket.onopen = () => {
-      console.log("WebSocket conectado");
-    };
-
-    socket.onmessage = (event) => {
-
-      const dados = JSON.parse(event.data);
-
-      setChartData({
-        labels: ["Janeiro","Fevereiro","Março"],
-        datasets: [
-          {
-            label: "Revenue",
-            data: dados.data,
-            backgroundColor: ["#dc2626", "#ef4444", "#f87171"]
-          }
+  const vendasMes = {
+    labels: ["Honda", "Yamaha", "BMW", "Kawasaki"],
+    datasets: [
+      {
+        label: "Participação nas vendas",
+        data: [40, 30, 20, 10],
+        backgroundColor: [
+          "#dc2626",
+          "#ef4444",
+          "#f87171",
+          "#fca5a5"
         ]
-      });
+      }
+    ]
+  };
 
-    };
+  const lucroMes = {
+    labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
+    datasets: [
+      {
+        label: "Lucro mensal (R$)",
+        data: [12000, 15000, 18000, 16000, 22000],
+        borderColor: "#dc2626",
+        backgroundColor: "#f87171",
+        tension: 0.4,
+        fill: false
+      }
+    ]
+  };
 
-    socket.onclose = () => {
-      console.log("WebSocket fechado");
-    };
-
-    return () => socket.close();
-
-  }, []);
+  const vendasMotos = {
+    labels: ["Esportiva", "Custom", "Trail", "Scooter"],
+    datasets: [
+      {
+        label: "Tipos de motos vendidas",
+        data: [25, 15, 35, 25],
+        backgroundColor: [
+          "#dc2626",
+          "#ef4444",
+          "#f87171",
+          "#fca5a5"
+        ]
+      }
+    ]
+  };
 
   return(
     <div>
       <Menu/>
+
       <div className={style.graph}>
 
         <div className={style.graph_top}>
+         
           <div className={style.graph_card}>
-            <Bar data={chartData}/>
+            <Bar data={vendasVendedores}/>
           </div>
 
           <div className={style.graph_card}>
-            <Doughnut data={chartData}/>
+            <Doughnut data={vendasMes}/>
           </div>
+        
         </div>
 
         <div className={style.graph_bottom}>
+          
           <div className={style.graph_card}>
-            <Line data={chartData}/>
+            <Line data={lucroMes}/>
           </div>
 
           <div className={style.graph_card}>
-            <Pie data={chartData}/>
+
+            <Pie data={vendasMotos}/>
           </div>
+        
         </div>
 
       </div>

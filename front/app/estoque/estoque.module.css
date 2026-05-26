@@ -1,0 +1,108 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    padding: 9%;
+    width: 100%;
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    width: 100%;
+}
+
+.category h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.box{
+    width: 25vw;
+    min-width: 280px;
+    height: 25vh;
+
+    border-radius: 12px;
+    border: 1px solid#ccc;
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size:larger;
+    font-weight: 600;
+    gap: 20px;
+
+    transition: transform 0.4s ease,
+                background-color 0.4s ease,
+                color 0.4s ease;
+
+    cursor: pointer;
+}
+
+.box:hover{
+    transform: scale(1.05);
+    background-color: #111;
+    color: white;
+   
+}
+
+.modal{
+    position: fixed;
+    inset: 0;
+
+    background-color: rgba(0,0,0,0.7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999;
+}
+
+.modalContent{
+    background-color: white;
+    padding: 40px;
+
+    border-radius: 16px;
+
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    text-align: center;
+}
+
+.closeButton{
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+
+    background-color: #111;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
