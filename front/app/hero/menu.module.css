@@ -1,21 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+
 
 .menu{
+
+    position: relative;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     background-color: rgba(0, 0, 0, 0.849);
-    
-    min-height: 20vh;    
+
+    min-height: 20vh;
 }
 
 .menu h1{
 
     color: aliceblue;
 
-    font-size:larger;
+    font-size: larger;
 
     font-family: 'Archivo Black', sans-serif;
 
@@ -26,5 +28,21 @@
     text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
 
     margin: 0;
+}
 
+.admin{
+
+    position: absolute;
+
+    right: 40px;
+
+    color: aliceblue;
+
+    font-family: 'Archivo Black', sans-serif;
+
+    font-size: 18px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
 }

@@ -1,5 +1,5 @@
 import style from "./body.module.css"
-import { ChartNoAxesCombined,  Motorbike , PersonStandingIcon } from 'lucide-react';
+import { ChartNoAxesCombined,  Motorbike , PersonStandingIcon, CommandIcon} from 'lucide-react';
 
 
 export default function Body(){
@@ -57,8 +57,12 @@ export default function Body(){
                     </li>
                 
                 </a>
-            
+
+
+                
             </ul>
+
+            
        
        </div>
 

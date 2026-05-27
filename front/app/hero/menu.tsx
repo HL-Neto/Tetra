@@ -2,18 +2,28 @@ import style from "./menu.module.css"
 
 
 
-export default function Menu(){
+export default function Menu() {
 
-    return(
+    return (
+
+        <div className={style.menu}>
+
+            <h1>Working in progress</h1>
 
 
-        <div   className={style.menu}>
+            < a 
+
+                href="/admin"
+                target="_blank"
+                rel="noopener noreferrer"
             
-            <h1> Working in progress</h1>
+            >
 
-           
+                <span className={style.admin}>Admin</span>
+            
+            </a>
+
         </div>
 
-
     );
-} 
+}
